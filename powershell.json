@@ -14,7 +14,7 @@
 			"description": "Log output to console"
 		}
 	*/
-		"Cmdlet (advanced function) - complete": {
+		"Cmdlet (Advanced Function) - Complete": {
 			"prefix": "cmdlet",
 			"body": [
 				"Function ${0:Verb-Noun} {",
@@ -60,8 +60,8 @@
 				"        [ValidateNotNull()]",
 				"        [ValidateNotNullOrEmpty()]",
 				"        [ValidateCount(0,5)]",
-				"        [ValidateSet(\"sun\", \"moon\", \"earth\")]",
-				"        [Alias(\"p1\")] ",
+				"        [ValidateSet('sun', 'moon', 'earth')]",
+				"        [Alias('p1')] ",
 				"        [String]\\$Param1,",
 				"",
 				"        # Param2 help description",
@@ -69,7 +69,7 @@
 				"        [AllowNull()]",
 				"        [AllowEmptyCollection()]",
 				"        [AllowEmptyString()]",
-				"        [ValidateScript({\\$true})]",
+				"        [ValidateScript({\\$True})]",
 				"        [ValidateRange(0,5)]",
 				"        [int]\\$Param2,",
 				"",
@@ -84,7 +84,7 @@
 				"    }",
 				"",
 				"    Process {",
-				"        If (\\$PSCmdlet.ShouldProcess(\"Target\", \"Operation\")) {",
+				"        If (\\$PSCmdlet.ShouldProcess('Target', 'Operation')) {",
 				"        }",
 				"    }",
 				"",
