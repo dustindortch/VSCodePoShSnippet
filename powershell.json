@@ -1,8 +1,8 @@
 {
 	/*
-		// Place your snippets for PowerShell here. Each snippet is defined under a snippet name and has a prefix, body and 
+		// Place your snippets for PowerShell here. Each snippet is defined under a snippet name and has a prefix, body and
 		// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
-		// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+		// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
 		// same ids are connected.
 		// Example:
 		"Print to console": {
@@ -17,8 +17,7 @@
 		"Cmdlet (advanced function) - complete": {
 			"prefix": "cmdlet",
 			"body": [
-				"function ${0:Verb-Noun}",
-				"{",
+				"Function ${0:Verb-Noun} {",
 				"",
 				"    <#",
 				"    .SYNOPSIS",
@@ -43,22 +42,21 @@
 				"        The functionality that best describes this cmdlet",
 				"    #>",
 				"",
-				"    [CmdletBinding(DefaultParameterSetName='Parameter Set 1',",
+				"    [CmdletBinding(DefaultParameterSetName='Default Parameter Set Name',",
 				"        SupportsShouldProcess,",
 				"        PositionalBinding,",
 				"        HelpUri = 'http://www.microsoft.com/',",
 				"        ConfirmImpact='Medium')]",
 				"    [Alias()]",
 				"    [OutputType([String])]",
-				"    Param",
-				"    (",
+				"    Param (",
 				"        # Param1 help description",
 				"        [Parameter(Mandatory, ",
 				"            ValueFromPipeline,",
 				"            ValueFromPipelineByPropertyName, ",
 				"            ValueFromRemainingArguments, ",
 				"            Position=0,",
-				"            ParameterSetName='Parameter Set 1')]",
+				"            ParameterSetName='Default Parameter Set Name')]",
 				"        [ValidateNotNull()]",
 				"        [ValidateNotNullOrEmpty()]",
 				"        [ValidateCount(0,5)]",
@@ -67,7 +65,7 @@
 				"        [String]\\$Param1,",
 				"",
 				"        # Param2 help description",
-				"        [Parameter(ParameterSetName='Parameter Set 1')]",
+				"        [Parameter(ParameterSetName='Default Parameter Set Name')]",
 				"        [AllowNull()]",
 				"        [AllowEmptyCollection()]",
 				"        [AllowEmptyString()]",
@@ -76,26 +74,24 @@
 				"        [int]\\$Param2,",
 				"",
 				"        # Param3 help description",
-				"        [Parameter(ParameterSetName='Another Parameter Set')]",
+				"        [Parameter(ParameterSetName='Another Parameter Set Name')]",
 				"        [ValidatePattern(\"[a-z]*\")]",
 				"        [ValidateLength(0,15)]",
 				"        [String]\\$Param3",
 				"    )",
 				"",
-				"    Begin",
-				"    {",
+				"    Begin {",
 				"    }",
-				"    Process",
-				"    {",
-				"        if (\\$pscmdlet.ShouldProcess(\"Target\", \"Operation\"))",
-				"        {",
+				"",
+				"    Process {",
+				"        If (\\$PSCmdlet.ShouldProcess(\"Target\", \"Operation\")) {",
 				"        }",
 				"    }",
-				"    End",
-				"    {",
+				"",
+				"    End {",
 				"    }",
 				"}"
 			],
-			"description": "Cmdlet (advanced function) - complete"
+			"description": "Cmdlet (Advanced Function) - Complete"
 		}
 	}
